@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:monospace;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #6489d2, #af26d2 ); */
+  background: #555;
+  padding: 10px;
+}
+.box{
+  background-color: rgb(255, 69, 0);
+  opacity: 80%;
+  height: 50px;
+  /*top-right top-left bottom-right bottom-left */
+  border-radius: 10px 10px 0px 0px;
+}
+.todoapp{
+  width: 100%;
+  max-width: 540px;
+  margin: 10px auto 20px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  background: #fff;
+}
+#header-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.todoapp h2{
+  font-size: 25px;
+  margin-bottom: 10px;
+  
+}
+
+.app-img{
+  height: 100px;
+  width:150px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  /* TRBL */
+  margin: 0px 30px 20px 30px; 
+}
+input{
+  flex:1;
+  border:none;
+  outline: none;
+  background: transparent;
+  padding: 16px 60px;
+  font-size: 14px;
+} 
+button{
+  padding: 16px 50px;
+  background-color: rgb(255, 69, 0);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+}
+
+#todo-list{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+ul li{
+  list-style: none;
+  font-size:  17px;
+  user-select: none;
+  cursor: pointer;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+}
+ul li::before{
+  content:'';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(images/check2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: #edeef0 ;
+}
+
+@media screen and (max-width: 500px){
+  body{
+    max-width: 500px;
+  }
+  .todoapp h2{
+    font-size: 16px;    
+  }
+  .app-img{
+    height: 60px;
+    width:80px;
+  }
+  .row{
+    padding-left: 10px;
+    /* TRBL */
+    margin: 0px 20px 20px 20px; 
+    justify-content: flex-end;
+  }
+  input{
+    padding: 0px;
+  }
+  button{
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  input{
+    padding-left: 20px;
+    width: 50%;
+  }
+  
+}

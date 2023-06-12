@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<header-text>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width: 320px)" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="40x40" href="images/checked.jpg">
+    <title>ToDo-app</title>
+</header-text>
+<body>
+<div class="container">
+    <div id="task-display" class="todoapp">
+        <div class="box"></div>   
+        <div id="header-text">
+            <h2>ToDo List</h2>
+        <div>
+            <img class="app-img" src="images/impostor.jpg" alt="img">
+        </div>
+    </div>
+    <div class="row">
+        <input type="text" name="task1" id="todo-name" placeholder="TaskName" required>
+        <button type="submit" onclick="addTodo()" id="my-button">ADD</button>    
+    </div>
+    <ul id="todo-list">
+        </ul>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
